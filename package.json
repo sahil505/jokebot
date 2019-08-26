@@ -1,0 +1,23 @@
+{
+  "name": "jokebot",
+  "version": "1.0.0",
+  "description": "A slack bot that generates random jokes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahil505/jokebot.git"
+  },
+  "author": "Sahil Khokhar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sahil505/jokebot/issues"
+  },
+  "homepage": "https://github.com/sahil505/jokebot#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "slackbots": "^1.2.0"
+  }
+}
