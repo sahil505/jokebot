@@ -23,5 +23,25 @@ bot.on('message', data => {
   if (data.type !== 'message') {
     return;
   }
-  console.log(data);
+  handleMessage(data.text);
 });
+
+// Respond to Data
+const handleMessage = (message) => {
+  if (message.includes(' chucknorris')) {
+    chuckJoke();
+  }
+}
+
+// Tell a chuckJoke
+const chuckJoke = () => {
+  axios.get('http://api.icndb.com/jokes/random')
+    .then(res => {
+      const joke = res.data.value.joke;
+      const params = {
+        icon_emoji: ':laughing:'
+      }
+
+      bot.postMessageToChannel('general', `Chuck Norris: ${joke}`, params);
+    })
+}
