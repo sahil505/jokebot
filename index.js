@@ -32,6 +32,8 @@ const handleMessage = (message) => {
     chuckJoke();
   } else if (message.includes(' yomama')) {
     yoMamaJoke();
+  } else if(message.includes(' random')) {
+    randomJoke();
   }
 }
 
@@ -59,4 +61,11 @@ const yoMamaJoke = () => {
 
       bot.postMessageToChannel('general', `Yo Mama: ${joke}`, params);
     })
+}
+
+// Tell a randomJoke
+const randomJoke = () => {
+  const rand = Math.floor(Math.random() * 2) + 1;
+  if (rand == 1) chuckJoke();
+  else if (rand == 2) yoMamaJoke();
 }
