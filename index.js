@@ -34,6 +34,8 @@ const handleMessage = (message) => {
     yoMamaJoke();
   } else if(message.includes(' random')) {
     randomJoke();
+  } else if(message.includes(' help')) {
+    getHelp();
   }
 }
 
@@ -68,4 +70,13 @@ const randomJoke = () => {
   const rand = Math.floor(Math.random() * 2) + 1;
   if (rand == 1) chuckJoke();
   else if (rand == 2) yoMamaJoke();
+}
+
+// Get help
+const getHelp = () => {
+  const params = {
+    icon_emoji: ':question:'
+  }
+
+  bot.postMessageToChannel('general', `Type @jokebot with either 'churcknorris', 'yomama' or 'random' to get a joke.`, params);
 }
