@@ -18,6 +18,7 @@
   "homepage": "https://github.com/sahil505/jokebot#readme",
   "dependencies": {
     "axios": "^0.19.0",
+    "nodemon": "^1.19.1",
     "slackbots": "^1.2.0"
   }
 }

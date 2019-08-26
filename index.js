@@ -17,3 +17,11 @@ bot.on('start', () => {
 
 // Error Handler
 bot.on('error', (err) => console.log(err));
+
+// Message Handler
+bot.on('message', data => {
+  if (data.type !== 'message') {
+    return;
+  }
+  console.log(data);
+});
